@@ -1,2 +1,6 @@
 require 'launchy'
-Launchy.open "https://www.ruby-lang.org/en/"
+
+puts "URLを指定してください!"
+print "URL:"; url = gets.chomp
+
+Launchy.open "#{url}"
