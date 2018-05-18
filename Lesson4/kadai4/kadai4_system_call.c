@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-main(){
+int main(){
   char c;
   int src, dst;
   int count;
