@@ -1,6 +1,17 @@
 require 'launchy'
 
-puts "URLを指定してください!"
-print "URL:"; url = gets.chomp
+class OpenUrl
+  def set_url
+    puts "URLを指定してください!"
+    print "URL:"
+    @url = gets.chomp
+  end
 
-Launchy.open "#{url}"
+  def open_url
+    Launchy.open "#{@url}"
+  end
+end
+
+Obj = OpenUrl.new
+Obj.set_url
+Obj.open_url
