@@ -36,4 +36,3 @@ int main(){
   close(src);
   close(dst);
 }
-
