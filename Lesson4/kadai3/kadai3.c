@@ -4,9 +4,15 @@ int main(int argc, char *argv[]){
   FILE *copy_file;
   char line[1000];
 
+  if(argc != 1){
+    printf("コマンドライン引数にちゃんとファイルを指定してなd(´・ω・｀)\n");
+    printf("第一引数：コピー元ファイル名, 第二引数：コピー先ファイル名\n");
+    return -1;
+  }
+
   origin_file = fopen(argv[1], "r");
   if(origin_file == NULL){
-    printf("ファイルが開けませんでした。\n");
+    printf("%sが開けませんでした。\n", argv[1]);
     return -1;
   }
 
