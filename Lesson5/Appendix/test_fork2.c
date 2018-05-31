@@ -5,7 +5,7 @@
 #include <errno.h>   /* errno */
 
 do_child(){
-  printf("This is parent = %d\n", getpid());
+  printf("This is child = %d\n", getpid());
 }
 
 int main(void){
