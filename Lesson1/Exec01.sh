@@ -8,6 +8,6 @@ while [ $COUNT -ne 3 ]
 do
   COUNT=`expr ${COUNT} + 1`
   touch "${FILE_NAME}_${COUNT}"
-  echo "Just create file name: Exec01_file${COUNT}"
+  echo "Just create file name: ${FILE_NAME}_${COUNT}"
   sleep 0.5
 done
