@@ -14,7 +14,12 @@ done
 
 for file in *.c
 do
-  cp $file $file.bak
-  echo "Just Complete backup: ${file}"
-  sleep 2
+  BACKUP_COUNT=0
+  while [ $BACKUP_COUNT -ne 5 ]
+  do
+    BACKUP_COUNT=`expr ${BACKUP_COUNT} + 1`
+    cp $file "${file}.bak${BACKUP_COUNT}"
+    echo "Just Complete backup: ${file}.bak${BACKUP_COUNT}"
+    sleep 2
+  done
 done
