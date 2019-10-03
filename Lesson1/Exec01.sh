@@ -2,8 +2,8 @@ COUNT=0
 FILE_NAME="Exec01_file"
 DIR_NAME="Exec01_dir"
 
-mkdir DIR_NAME
-cd DIR_NAME
+mkdir $DIR_NAME
+cd $DIR_NAME
 
 while [ $COUNT -ne 3 ]
 do
