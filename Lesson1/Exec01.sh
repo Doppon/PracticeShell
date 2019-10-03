@@ -9,7 +9,6 @@ while [ $COUNT -ne 3 ]
 do
   COUNT=`expr ${COUNT} + 1`
   touch "${FILE_NAME}_${COUNT}.c"
-  echo "Just create file name: ${FILE_NAME}_${COUNT}.c"
 done
 
 for file in *.c
@@ -19,7 +18,6 @@ do
   do
     BACKUP_COUNT=`expr ${BACKUP_COUNT} + 1`
     cp $file "${file}.bak${BACKUP_COUNT}"
-    echo "Just Complete backup: ${file}.bak${BACKUP_COUNT}"
     sleep 2
   done
 done
