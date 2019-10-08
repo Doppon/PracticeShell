@@ -4,6 +4,12 @@
 
 int main(int argc, char const *argv[])
 {
+  if (argv[1] == NULL)
+  {
+    printf("Usage: power num [num]");
+    return 0;
+  }
+
   double x = atof(argv[1]);
   double y = 2.0;
 
