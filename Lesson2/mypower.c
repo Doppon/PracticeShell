@@ -4,6 +4,11 @@
 int main(int argc, char const *argv[])
 {
   int x = atoi(argv[1]);
+  if (argv[2] != NULL)
+  {
+    int y = atoi(argv[2]);
+  }
+
   printf("入力された数値は: %d \n", x);
 
   if (x >= 1)
