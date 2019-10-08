@@ -4,12 +4,11 @@
 int main(int argc, char const *argv[])
 {
   int x = atoi(argv[1]);
+  int y = 2;
+
   if (argv[2] != NULL)
   {
     int y = atoi(argv[2]);
-  } else
-  {
-    int y = 2;
   }
 
   printf("入力された数値は: %d \n", x);
