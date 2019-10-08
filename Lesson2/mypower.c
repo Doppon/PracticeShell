@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 
   if (argv[2] != NULL)
   {
-    int y = atoi(argv[2]);
+    y = atoi(argv[2]);
   }
 
   printf("入力された数値は: %d \n", x);
