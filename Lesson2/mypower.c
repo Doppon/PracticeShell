@@ -7,11 +7,14 @@ int main(int argc, char const *argv[])
   if (argv[2] != NULL)
   {
     int y = atoi(argv[2]);
+  } else
+  {
+    int y = 2;
   }
 
   printf("入力された数値は: %d \n", x);
 
-  if (x >= 1)
+  if (y >= 1)
   {
     printf("1以上");
   } else
