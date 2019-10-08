@@ -12,8 +12,6 @@ int main(int argc, char const *argv[])
     y = atof(argv[2]);
   }
 
-  printf("%lf \n", y);
-
   if (y >= 1)
   {
     printf("1以上 \n");
