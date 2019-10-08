@@ -3,10 +3,10 @@
 
 int main(int argc, char const *argv[])
 {
-  int input = atoi(argv[1]);
-  printf("入力された数値は: %d \n", input);
+  int x = atoi(argv[1]);
+  printf("入力された数値は: %d \n", x);
 
-  if (input >= 1)
+  if (x >= 1)
   {
     printf("1以上");
   } else
