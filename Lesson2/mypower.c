@@ -4,22 +4,24 @@
 
 int main(int argc, char const *argv[])
 {
-  int x = atoi(argv[1]);
-  int y = 2;
+  double x = atof(argv[1]);
+  double y = 2.0;
 
   if (argv[2] != NULL)
   {
-    y = atoi(argv[2]);
+    y = atof(argv[2]);
   }
 
-  printf("入力された数値は: %d \n", x);
+  printf("%lf \n", y);
 
   if (y >= 1)
   {
-    printf("1以上");
+    printf("1以上 \n");
+    printf("ルートは%lf \n", pow(x, y));
   } else
   {
-    printf("1未満");
+    printf("1未満 \n");
+    printf("ルートは%lf \n", pow(x, y));
   }
 
   return 0;
