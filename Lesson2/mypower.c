@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main(int argc, char const *argv[])
 {
   int input = atoi(argv[1]);
@@ -12,7 +13,6 @@ int main(int argc, char const *argv[])
   {
     printf("1未満");
   }
-  
-  
+
   return 0;
 }
