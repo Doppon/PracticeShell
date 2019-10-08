@@ -3,6 +3,8 @@ Student Number: AL16060
 
 # Exec01.sh
 
+- 工夫した点
+
 
 # Exec02.sh
 
