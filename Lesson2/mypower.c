@@ -14,11 +14,11 @@ int main(int argc, char const *argv[])
 
   if (y >= 1)
   {
-    printf("1以上 \n");
+    // printf("1以上 \n");
     printf("%lf \n", pow(x, y));
   } else
   {
-    printf("1未満 \n");
+    // printf("1未満 \n");
     printf("%lf \n", pow(x, y));
   }
 
