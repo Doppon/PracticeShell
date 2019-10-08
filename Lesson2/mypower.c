@@ -15,11 +15,11 @@ int main(int argc, char const *argv[])
   if (y >= 1)
   {
     printf("1以上 \n");
-    printf("ルートは%lf \n", pow(x, y));
+    printf("%lf \n", pow(x, y));
   } else
   {
     printf("1未満 \n");
-    printf("ルートは%lf \n", pow(x, y));
+    printf("%lf \n", pow(x, y));
   }
 
   return 0;
