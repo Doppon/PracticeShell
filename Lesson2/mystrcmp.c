@@ -24,5 +24,14 @@ int main(int argc, char const *argv[])
     return 0;
   }
 
+  const char* word1 = argv[1];
+  const char* word2 = argv[2];
+
+  if (LengthOf(word1) == LengthOf(word2))
+  {
+    printf("0");
+    return 0;
+  }
+
   return 0;
 }
