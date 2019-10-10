@@ -30,7 +30,12 @@ int main(int argc, char const *argv[])
   if (LengthOf(word1) == LengthOf(word2))
   {
     printf("0");
-    return 0;
+  } else if (LengthOf(word1) >= LengthOf(word2))
+  {
+    printf("1");
+  } else
+  {
+    printf("-1");
   }
 
   return 0;
