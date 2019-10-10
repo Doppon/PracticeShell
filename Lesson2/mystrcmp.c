@@ -35,10 +35,15 @@ int main(int argc, char const *argv[])
       diff = word1[i] - word2[i];
       if (diff != 0)
       {
-        // 正だったら 1
-
-        // 負だったら -1
-
+        if (diff > 0)
+        {
+          printf("1");
+          return 0;
+        } else
+        {
+          printf("-1");
+          return 0;
+        }
       }
     }
     printf("0");
