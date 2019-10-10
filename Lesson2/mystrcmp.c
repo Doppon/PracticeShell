@@ -26,9 +26,21 @@ int main(int argc, char const *argv[])
 
   const char* word1 = argv[1];
   const char* word2 = argv[2];
+  int diff = word1[0] - word2[0];
 
   if (LengthOf(word1) == LengthOf(word2))
   {
+    for (int i; i <= LengthOf(word1) - 1; i++)
+    {
+      diff = word1[i] - word2[i];
+      if (diff != 0)
+      {
+        // 正だったら 1
+
+        // 負だったら -1
+
+      }
+    }
     printf("0");
   } else if (LengthOf(word1) >= LengthOf(word2))
   {
