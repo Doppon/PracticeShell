@@ -14,7 +14,13 @@ int main(int argc, char const *argv[])
 {
   if (argv[1] == NULL)
   {
-    printf("Usage: strcmp str str");
+    printf("Error01 Usage: strcmp str str");
+    return 0;
+  }
+
+  if (argv[2] == NULL)
+  {
+    printf("Error02 Usage: strcmp str str");
     return 0;
   }
 
