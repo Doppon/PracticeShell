@@ -24,15 +24,6 @@ long long int getFileSize(const char* fileName)
   return -1LL;
 }
 
-int LengthOf(const char *s)
-{
-  int n = 0;
-
-  while (*s++ != '\0')
-    n++;
-  return (n);
-}
-
 int main(int argc, char const *argv[])
 {
   if (argv[1] == NULL)
