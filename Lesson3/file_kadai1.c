@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <limits.h>
 
+#define BUF_SIZE 256
+
 long long int getFileSize(const char* fileName)
 {
   FILE* fp = fopen(fileName, "rb");
@@ -40,8 +42,21 @@ int main(int argc, char const *argv[])
   }
  
   const char* file_name = argv[1];
-
   long long int file_size = getFileSize(file_name);
+
+  FILE *fp;
+  char buf[BUF_SIZE];
+  int line = 0;
+ 
+  if ((fp = fopen(file_name, "r")) == NULL) {
+    return -1;
+  }
+ 
+  while (fgets(buf, BUF_SIZE, fp) != NULL) {
+    line++;
+  }
+
+  printf("行数: %d\n", line);
   printf("文字数(バイト): %lld\n", file_size);
 
   return 0;
