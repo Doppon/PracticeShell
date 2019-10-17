@@ -2,27 +2,6 @@
 #include <stdlib.h>
 #include <limits.h>
 
-#define BUF_SIZE 256
-
-long long int getFileSize(const char* fileName)
-{
-  FILE* fp = fopen(fileName, "rb");
-  if (fp == NULL) {
-    return -1LL;
-  }
-
-  if (fseek(fp, 0L, SEEK_END) == 0) {
-    fpos_t pos;
-
-    if (fgetpos(fp, &pos) == 0) {
-      fclose(fp);
-      return (long long int)pos;
-    }
-  }
-
-  fclose(fp);
-  return -1LL;
-}
 
 int main(int argc, char const *argv[])
 {
@@ -33,23 +12,46 @@ int main(int argc, char const *argv[])
   }
  
   const char* file_name = argv[1];
-  long long int file_size = getFileSize(file_name);
 
   FILE *fp;
-  char buf[BUF_SIZE];
-  int line = 0;
+  int num, blank;
+  unsigned long character, word, line;
+  char buff[1024];
+  unsigned char *pntr, *wp;
  
   if ((fp = fopen(file_name, "r")) == NULL) {
     printf("Error02 Could not open the file.");
     return -1;
   }
  
-  while (fgets(buf, BUF_SIZE, fp) != NULL) {
-    line++;
+  blank = 0;
+  character = word = line = 0;
+  while((num = fread(buff, 1, 1024, fp)) > 0)
+  {
+    for(wp = buff; num > 0; num--,wp++)
+    {
+      if(*wp <= ' '){
+        if(*wp == '\n')
+        {
+          line++;
+          character++;
+        }
+        if( !blank )
+          word++;
+
+        blank = 1;
+        character++;
+      }
+      else{
+        blank = 0;
+        character++;
+      }
+    }
   }
 
-  printf("行数: %d\n", line);
-  printf("文字数(バイト): %lld\n", file_size);
+  printf("行数: %lu\n", line);
+  printf("文字数(バイト): %lu\n", character);
+  printf("単語数: %lu", word);
 
   return 0;
 }
