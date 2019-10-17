@@ -49,6 +49,7 @@ int main(int argc, char const *argv[])
   int line = 0;
  
   if ((fp = fopen(file_name, "r")) == NULL) {
+    printf("Error02 Could not open the file.");
     return -1;
   }
  
