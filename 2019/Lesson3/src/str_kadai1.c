@@ -8,5 +8,4 @@ int main(void)
   while (fgets(line_buf, LINE_LEN, stdin) != NULL)
     // puts(line_buf);
     printf("%s", line_buf);
-
 }
