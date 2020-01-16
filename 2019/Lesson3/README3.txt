@@ -23,6 +23,28 @@ Student Number: AL16060
 2. 出力側の改行を取り除く
 後者の方がすぐに実装できそうだったのでそちらを採用しました。
 具体的には`puts`から`printf`に置き換えることで課題を克服しました。
+(((実行結果)))
+(((BEFORE)))
+$ gcc str_kadai1_before.c 
+$ ./a.out
+hoge
+hoge
+
+hoge
+hoge
+
+huga
+huga
+
+(((AFTER)))
+$ gcc str_kadai1.c 
+$ ./a.out
+hoge
+hoge
+huga
+huga
+huga
+huga
 
 【課題2】
 少し、問題の意図をちゃんと掴めなかったのか文字列の長さを `strlen` を用いなくても
