@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
   character = word = line = 0;
   while((num = fread(buff, 1, 1024, fp)) > 0)
   {
-    for(wp = buff; num > 0; num--,wp++)
+    for(wp = buff; num > 0; num--, wp++)
     {
       if(*wp <= ' '){
         if(*wp == '\n')
