@@ -10,6 +10,7 @@ int main(int argc, char const *argv[])
     return 0;
   }
 
+  // (ASCII to series)
   // atoi() | string -> integer
   // atof() | string -> double
   double x = atof(argv[1]);
