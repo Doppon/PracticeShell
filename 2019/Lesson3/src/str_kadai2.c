@@ -5,6 +5,7 @@ int main()
 {
   int c;
 
+  // getchar() | get only one character.
   while ((c = getchar()) != EOF) {
     if (islower(c))
     {
