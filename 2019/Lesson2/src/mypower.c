@@ -10,6 +10,8 @@ int main(int argc, char const *argv[])
     return 0;
   }
 
+  // atoi() | string -> integer
+  // atof() | string -> double
   double x = atof(argv[1]);
   double y = 2.0;
 
