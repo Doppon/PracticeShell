@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-main()
+int main()
 {
   int c;
 
