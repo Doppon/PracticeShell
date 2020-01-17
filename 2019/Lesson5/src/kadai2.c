@@ -9,20 +9,22 @@ do_child()
   printf("This is child (pid = %d)\n", getpid());
 }
 
-int main(void){
-  
+int main(void)
+{  
   int child, status;
 
   child = fork();
 
-  if(child == 0){
+  if(child == 0)
+  {
     do_child();
-  } else {
-    if(wait(&status) < 0){
+  } else
+  {
+    if(wait(&status) < 0)
+    {
       perror("wait");
       exit(1);
     }
     printf("This is parent = %d\n", getpid());  
   }
-  
 }
