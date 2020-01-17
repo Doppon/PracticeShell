@@ -20,7 +20,7 @@ int main(void)
     do_child();
   } else
   {
-    if(wait(&status) < 0)
+    if (wait(&status) < 0)
     {
       perror("wait");
       exit(1);
