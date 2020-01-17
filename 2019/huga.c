@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/*  Result
+
+     var1 - d: 100
+     var1 - d: 0x7ffee6c0d8fc
+ var2 = &var1: 0x7ffee6c0d8fc
+*var2 =   255: 255
+
+*/
 int main(void) {
     int var1 = 100;
     int *var2;
