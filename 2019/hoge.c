@@ -23,5 +23,12 @@ main()
   if (child==0)
   {
     do_child();
+  } else
+  {
+    if (wait(&status) < 0)
+    {
+      perror("wait");
+      exit(1);
+    }
   }
 }
