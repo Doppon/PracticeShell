@@ -31,4 +31,6 @@ main()
       exit(1);
     }
   }
+
+  printf("This is parent. The child (pid=%d) existed with status(%d). \n", child, WIFEXITED(status));
 }
