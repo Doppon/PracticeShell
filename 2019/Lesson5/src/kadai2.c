@@ -4,7 +4,7 @@
 #include <stdlib.h>    /* exit */
 #include <errno.h>     /* errno */
 
-do_child()
+void do_child()
 {
   printf("This is child (pid = %d)\n", getpid());
 }
