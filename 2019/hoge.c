@@ -10,7 +10,7 @@ void do_child()
   exit(2);
 }
 
-main()
+int main()
 {
   int child, status;
 
