@@ -13,4 +13,15 @@ void do_child()
 main()
 {
   int child, status;
+
+  if ((child = fork()) < 0)
+  {
+    perror("fork");
+    exit(1);
+  }
+
+  if (child==0)
+  {
+    do_child();
+  }
 }
