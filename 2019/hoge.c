@@ -6,7 +6,7 @@ extern char **environ;
 
 void do_child()
 {
-  printf("");
+  printf("This is childe(pid=%d).\n", getpid());
   exit(2);
 }
 
