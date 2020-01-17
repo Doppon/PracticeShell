@@ -15,12 +15,14 @@ int main()
 {
   int child, status;
 
+  // When Failed to fork()
   if ((child = fork()) < 0)
   {
     perror("fork");
     exit(1);
   }
 
+  // When Success to fork()
   if (child==0)
   {
     do_child();
