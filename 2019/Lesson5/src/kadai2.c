@@ -1,10 +1,11 @@
-#include <stdio.h>   /* printf, stderr, fprintf */
+#include <stdio.h>     /* printf, stderr, fprintf */
 #include <sys/types.h> /* pid_t */
-#include <unistd.h>  /* _exit, fork */
-#include <stdlib.h>  /* exit */
-#include <errno.h>   /* errno */
+#include <unistd.h>    /* _exit, fork, getpid */
+#include <stdlib.h>    /* exit */
+#include <errno.h>     /* errno */
 
-do_child(){
+do_child()
+{
   printf("This is child (pid = %d)\n", getpid());
 }
 
