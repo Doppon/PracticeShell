@@ -19,6 +19,7 @@ int main()
   if ((child = fork()) < 0)
   {
     perror("fork");
+    // Abnormal termination
     exit(1);
   }
 
@@ -31,6 +32,7 @@ int main()
     if (wait(&status) < 0)
     {
       perror("wait");
+      // Abnormal termination
       exit(1);
     }
   }
