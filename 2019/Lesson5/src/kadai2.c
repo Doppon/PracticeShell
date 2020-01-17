@@ -6,7 +6,7 @@
 
 void do_child()
 {
-  printf("This is child (pid = %d)\n", getpid());
+  printf("This is child  (pid = %d)\n", getpid());
 }
 
 int main(void)
@@ -25,6 +25,6 @@ int main(void)
       perror("wait");
       exit(1);
     }
-    printf("This is parent = %d\n", getpid());  
+    printf("This is parent (pid = %d)\n", getpid());  
   }
 }
