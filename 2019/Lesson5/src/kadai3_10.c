@@ -16,15 +16,16 @@ int main(){
 
   //親プロセスはすべての子プロセスの終了を待つ
 	if( i == P_MAX ){
-		for(  i = 0 ; i < P_MAX ; i++ ){
+		for( i = 0 ; i < P_MAX ; i++ )
+    {
 			wait(&val);
 		}
   // 子プロセス
-	}else if( pid[i] == 0)
+	} else if( pid[i] == 0)
   {
 		printf("child:%d\n",i);
 		exit(0);
-	}else
+	} else
   {
     perror("child process") ;
     exit(0);
