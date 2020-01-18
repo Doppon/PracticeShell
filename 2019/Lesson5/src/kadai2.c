@@ -23,7 +23,8 @@ int main(void)
     if (wait(&status) < 0)
     {
       perror("wait");
-      exit(1);
+      // Define EXIT_FAILURE 1 for stdlib.h
+      exit(EXIT_FAILURE);
     }
     printf("This is parent (pid = %d)\n", getpid());  
   }
