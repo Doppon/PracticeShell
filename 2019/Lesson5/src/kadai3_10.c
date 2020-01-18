@@ -17,9 +17,10 @@ int main(void){
 
   if (pid == 0)
   {
-    int j;
-    for (j = 0; j <= 10; j++){
-      printf("child: %d\n", j);
+    int count;
+    for (count = 0; count <= 10; count++)
+    {
+      printf("child: %d\n", count);
     }
     _exit(0);
   }
