@@ -10,6 +10,7 @@ int main(void){
    pid = fork();
    if (pid == -1){
       fprintf(stderr, "can't fork, error %d\n", errno);
+      // Define EXIT_FAILURE 1 for stdlib.h
       exit(EXIT_FAILURE);
    }
 
