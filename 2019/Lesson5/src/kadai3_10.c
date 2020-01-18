@@ -12,7 +12,18 @@ int main(){
 
 	// 子プロセス生成。子プロセスは次の行から始まるため、
 	// このような記述をすると、子プロセスが子プロセスを生成しないで済む。
-	for( count=0 ; count < P_MAX && (pid[count] = fork()) > 0 ; count++ );
+	// for( count=0 ; count < P_MAX && (pid[count] = fork()) > 0 ; count++ );
+  count = 0;
+  while (count < P_MAX)
+  {
+    if ((pid[count] = fork()) > 0)
+    {
+      count++;
+    } else
+    {
+      break;
+    }
+  }
 
   //親プロセスはすべての子プロセスの終了を待つ
 	if( count == P_MAX ){
