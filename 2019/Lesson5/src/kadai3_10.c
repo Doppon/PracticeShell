@@ -16,6 +16,12 @@ int main(){
   count = 0;
   while (count < P_MAX)
   {
+    // Success
+    //   Parent Pid => Child Pid
+    //   Child  Pid => 0
+    // Failed
+    //   Parent Pid => -1
+    //   Child  Pid => errno
     if ((pid[count] = fork()) > 0)
     {
       count++;
