@@ -4,26 +4,29 @@
 #include <stdlib.h>    /* exit */
 #include <errno.h>     /* errno */
 
-int main(void){
-  pid_t  pid;
+#define P_MAX 10
 
-  pid = fork();
-  if (pid == -1)
-  {
-    fprintf(stderr, "can't fork, error %d\n", errno);
-    // Define EXIT_FAILURE 1 for stdlib.h
-    exit(EXIT_FAILURE);
-  }
+int main(){
+  int i, val;
+	int pid[P_MAX];
 
-  if (pid == 0)
-  {
-    int count;
-    for (count = 0; count <= 10; count++)
-    {
-      printf("child: %d\n", count);
-    }
-    _exit(0);
-  }
-  return 0;
+	// 子プロセス生成。子プロセスは次の行から始まるため、
+	// このような記述をすると、子プロセスが子プロセスを生成しないで済む。
+	for( i=0 ; i < P_MAX && (pid[i] = fork()) > 0 ; i++ );
+
+  //親プロセスはすべての子プロセスの終了を待つ
+	if( i == P_MAX ){
+		for(  i = 0 ; i < P_MAX ; i++ ){
+			wait(&val);
+		}
+  // 子プロセス
+	}else if( pid[i] == 0){
+		printf("child:%d\n",i);
+		exit(0);
+	}else{
+    perror("child process") ;
+    exit(0);
+	}
+	return 0;
 }
 
