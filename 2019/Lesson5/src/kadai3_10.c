@@ -24,6 +24,7 @@ int main(){
 	} else if( pid[count] == 0)
   {
 		printf("child:%d\n",count);
+    printf("This is child. (pid=%d)\n", getpid());
 		exit(0);
 	} else
   {
