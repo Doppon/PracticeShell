@@ -35,7 +35,7 @@ int main()
       exit(EXIT_FAILURE);
     }
   }
-  printf("This is parent. (pid=%d)\n", getpid());  
+  printf("This is parent. (pid=%d)\n", getpid());
   //   WIFEXITED(status) : 子プロセスが正常に終了した場合に真を返します。「正常」とは、exit関数の呼び出しや、main関数から復帰した場合です。
   // WEXITSTATUS(status) : 子プロセスの終了ステータスを返します。終了ステータスはexit関数やmain関数の引数で指定した値です。なお、このマクロはWIFEXITEDマクロが真を返した場合だけ使用したほうがよいでしょう。
   // WIFSIGNALED(status) : 子プロセスがシグナルにより終了した場合に真を返します。
