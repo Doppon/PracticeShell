@@ -20,10 +20,12 @@ int main(){
 			wait(&val);
 		}
   // 子プロセス
-	}else if( pid[i] == 0){
+	}else if( pid[i] == 0)
+  {
 		printf("child:%d\n",i);
 		exit(0);
-	}else{
+	}else
+  {
     perror("child process") ;
     exit(0);
 	}
