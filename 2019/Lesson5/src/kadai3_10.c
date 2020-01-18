@@ -7,23 +7,23 @@
 #define P_MAX 10
 
 int main(){
-  int i, val;
+  int count, val;
 	int pid[P_MAX];
 
 	// 子プロセス生成。子プロセスは次の行から始まるため、
 	// このような記述をすると、子プロセスが子プロセスを生成しないで済む。
-	for( i=0 ; i < P_MAX && (pid[i] = fork()) > 0 ; i++ );
+	for( count=0 ; count < P_MAX && (pid[count] = fork()) > 0 ; count++ );
 
   //親プロセスはすべての子プロセスの終了を待つ
-	if( i == P_MAX ){
-		for( i = 0 ; i < P_MAX ; i++ )
+	if( count == P_MAX ){
+		for( count = 0 ; count < P_MAX ; count++ )
     {
 			wait(&val);
 		}
   // 子プロセス
-	} else if( pid[i] == 0)
+	} else if( pid[count] == 0)
   {
-		printf("child:%d\n",i);
+		printf("child:%d\n",count);
 		exit(0);
 	} else
   {
