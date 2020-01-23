@@ -7,7 +7,7 @@
 #define P_MAX 10
 
 int main(){
-  int count, val;
+  int count, status;
 	int pid[P_MAX];
 
 	// 子プロセス生成。子プロセスは次の行から始まるため、
@@ -37,7 +37,7 @@ int main(){
 	if( count == P_MAX ){
 		for( count = 0 ; count < P_MAX ; count++ )
     {
-			wait(&val);
+			wait(&status);
 		}
   // 子プロセス
 	} else if( pid[count] == 0)
