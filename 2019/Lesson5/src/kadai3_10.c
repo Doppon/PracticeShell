@@ -42,7 +42,7 @@ int main(){
   // 子プロセス
 	} else if( pid[count] == 0)
   {
-		printf("child:%d\n",count);
+		printf("child No:%d\n",count+1);
     printf("This is child. (pid=%d)\n", getpid());
 		exit(0);
 	} else
