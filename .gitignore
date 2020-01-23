@@ -1,3 +1,8 @@
+# File
 *a.out
 .DS_Store
 *.plist
+
+# VScode
+launch.json
+tasks.json
